@@ -43,7 +43,7 @@
         </div>
         
         <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Пароль</label>
+            <label for="inputPassword5" class="form-label">Пароль</label>
             <input type="password" class="form-control" id="inputPassword5">
           </div>
           <div class="col-md-6">
@@ -92,15 +92,21 @@ if (name.value == ""){
  if (password.value == "") {
      document.querySelector("#errorMessage").innerHTML+= "Пароль не заполнен <br>";
  }
- /* если подтверждение не равно паролю*/
- if (confirm.value != "password") {
-     document.querySelector("#errorMessage").innerHTML+= "пароль не совпадает <br>";
- }
-/*если подтверждение н равно паролю*/
- if (confirm.value.correct ==  "password" ) {
-     document.querySelector("#correctMessage").innerHTML+= "всё верно <br>";
+ if (confirm.value == ""){
+     document.querySelector("#errorMessage").innerHTML+= "Пароль не заполнен <br>";
  }
 
+ /* если подтверждение не равно паролю*/
+ if (confirm.value != password.value) {
+     document.querySelector("#errorMessage").innerHTML+= "пароль не совпадает <br>";
+   
+ }
+/*если подтверждение равно паролю*/
+ if (confirm.value ==  password.value) {
+     document.querySelector("#correctMessage").innerHTML+= "всё верно <br>";
+   
+ }
+ 
 }
 </script>
 </body>
