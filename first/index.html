@@ -13,22 +13,22 @@
 
 
     <p> <input type="text" id="task1">
-        <input type="button" name="plus" value="+" onclick="ShowMessageplus();">
+        <input type="button" name="plus" value="+" onclick="showMessageplus();">
         <input type="text" id="task2">
         <input type="button" name="result" value="=" >
         <input type="text" id="task3"> </p>
     <p> <input type="text" id="task4">
-        <input type="button" name="minus" value="-" onclick="ShowMessageminus();">
+        <input type="button" name="minus" value="-" onclick="showMessageminus();">
         <input type="text" id="task5">
         <input type="button" name="result" value="=" >
         <input type="text" id="task6"> </p>
     <p> <input type="text" id="task7">
-        <input type="button" name="multiply" value="*" onclick="ShowMessagemultiply();">
+        <input type="button" name="multiply" value="*" onclick="showMessagemultiply();">
         <input type="text" id="task8">
         <input type="button" name="result" value="=" >
         <input type="text" id="task9"> </p>
     <p> <input type="text" id="task10">
-        <input type="button" name="divide" value="/" onclick="ShowMessagedivide();">
+        <input type="button" name="divide" value="/" onclick="showMessagedivide();">
         <input type="text" id="task11">
         <input type="button" name="result" value="=" >
         <input type="text" id="task12"> </p>
@@ -36,14 +36,14 @@
 
 
     <script>
-        function ShowMessageplus() {
+        function showMessageplus() {
             let a = document.getElementById("task1").value;
             let b = document.getElementById("task2").value;
             let c = (Number(a) + Number(b));
             document.getElementById("task3").value = c;
         }
 
-        function ShowMessageminus() {
+        function showMessageminus() {
             let a = document.getElementById("task4").value;
             let b = document.getElementById("task5").value;
             let c = a - b;
