@@ -104,24 +104,20 @@
             if (confirm.value == "") {
                 document.querySelector("#errorMessage").innerHTML += "Пароль не заполнен <br>";
             }
-
-
-            if (confirm.value == password.value) {
-                document.querySelector("#correctMessage").innerHTML += "всё верно <br>";
-            } else if (confirm.value != password.value) {
+            if (confirm.value != password.value) {
                 document.querySelector("#errorMessage").innerHTML += "пароль не совпадает <br>";
-            } else
-                document.querySelector("#errorMessage").innerHTML += "не верно <br>";
+            }
 
-            /* если подтверждение не равно паролю
- if (confirm.value != password.value) {
-     document.querySelector("#errorMessage").innerHTML+= "пароль не совпадает <br>";
-   
- }
-/*если подтверждение равно паролю
- if (confirm.value ==  password.value) {
-     document.querySelector("#correctMessage").innerHTML+= "всё верно <br>";
-    }*/
+            if (name.value != "" &&
+                surname.value != "" &&
+                password.value != "" &&
+                confirm.value != "" &&
+                confirm.value == password.value) {
+                document.querySelector("#correctMessage").innerHTML += "всё верно <br>";
+            } else
+                document.querySelector("#errorMessage").innerHTML += "есть ошибка!!! <br>";
+
+
 
         }
     </script>
